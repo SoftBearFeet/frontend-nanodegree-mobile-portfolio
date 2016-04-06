@@ -23,6 +23,7 @@
   "homepage": "https://github.com/SoftBearFeet/frontend-nanodegree-mobile-portfolio#readme",
   "devDependencies": {
     "grunt": "^1.0.1",
-    "grunt-responsive-images": "^0.1.7"
+    "grunt-responsive-images": "^0.1.7",
+    "load-grunt-tasks": "^3.4.1"
   }
 }
