@@ -402,6 +402,7 @@ var pizzaElementGenerator = function(i) {
 var resizePizzas = function(size) {
   window.performance.mark("mark_start_resize");   // User Timing API function
 
+
   // Changes the value for the size of the pizza above the slider
   function changeSliderLabel(size) {
     switch(size) {
@@ -421,54 +422,39 @@ var resizePizzas = function(size) {
 
   changeSliderLabel(size);
 
-   // Returns the size difference to change a pizza element from one size to another. Called by changePizzaSlices(size).
-
-// Removed determineDx function. Not needed anymore.
-  //function determineDx (elem, size) {
-    //var oldWidth = elem.offsetWidth;
-    //var windowWidth = document.querySelector("#randomPizzas").offsetWidth;
-    //var oldSize = oldWidth / windowWidth;
-
-    // Optional TODO: change to 3 sizes? no more xl?
-    // Changes the slider value to a percent width
-    function sizeSwitcher (size) {
-      var newWidth
-      switch(size) {
-        case "1":
-          newWidth = 25;
-          break;
-        case "2":
-          newWidth = 33.33;
-          break;
-        case "3":
-          newWidth = 50;
-          break;
-        default:
-          console.log("bug in sizeSwitcher");
-      }
-    }
-
-    //var newSize = sizeSwitcher(size);
-    //var dx = (newSize - oldSize) * windowWidth;
-
-    //return dx;
-  //}
 
   // Iterates through pizza elements on the page and changes their widths
   function changePizzaSizes(size) {
-      var randomPizza = document.querySelectorAll(".randomPizzaContainer");
-      for (var i = 0; i < randomPizza.length; i++) {
-          randomPizza[i].style.width + "%" = newwidth;
-      }
+    var newWidth;
+
+    switch(size) {
+      case "1":
+        newWidth = 25;
+        break;
+      case "2":
+        newWidth = 33.3;
+        break;
+      case "3":
+        newWidth = 50;
+        break;
+      default:
+        console.log("bug in sizeSwitcher");
+    }
+
+    var randomPizzas = document.querySelectorAll(".randomPizzaContainer");
+
+    for (var i = 0; i < randomPizzas.length; i++) {
+      randomPizzas[i].style.width = newWidth + '%';
+    }
   }
 
   changePizzaSizes(size);
 
-  // User Timing API is awesome
+
   window.performance.mark("mark_end_resize");
   window.performance.measure("measure_pizza_resize", "mark_start_resize", "mark_end_resize");
   var timeToResize = window.performance.getEntriesByName("measure_pizza_resize");
-  console.log("Time to resize pizzas: " + timeToResize[timeToResize.length-1].duration + "ms");
+  console.log("Time to resize pizzas: " + timeToResize[0].duration + "ms");
 };
 
 window.performance.mark("mark_start_generating"); // collect timing data
