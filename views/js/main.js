@@ -454,7 +454,7 @@ var resizePizzas = function(size) {
 
       // These values are the same for each member of the array, so they should
       // not be inside the for-loop.
-      var dx = determineDx(randomPizzas[i], size);
+      var dx = determineDx(randomPizzas, size);
       var newwidth = (randomPizzas[i].offsetWidth + dx) + 'px';
 
 
