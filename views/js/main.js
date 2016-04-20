@@ -462,7 +462,7 @@ var resizePizzas = function(size) {
       }
   }
 
-  changePizzaSizes(size);
+  sizeSwitcher(size);
 
 
   window.performance.mark("mark_end_resize");
