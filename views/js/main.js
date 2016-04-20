@@ -535,7 +535,7 @@ document.addEventListener('DOMContentLoaded', function() {
   var cols = 8;
   var s = 256;
 // Changed loop. Now only making 25 instead of 200.
-  for (var i = 25; i--) {
+  for (var i = 25; i--;) {
     var elem = document.createElement('img');
     elem.className = 'mover';
     elem.src = "images/pizza.png";
