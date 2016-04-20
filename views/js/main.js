@@ -512,7 +512,7 @@ function updatePositions() {
   var items = document.getElementsByClassName('mover');
   var top = (document.body.scrollTop / 1250);
 
-  for (var i = 0; i < items.length; i++) {
+  for (var i = items.length; i--;) {
     var phase = Math.sin(top + (i % 5));
     items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
   }
@@ -535,7 +535,7 @@ document.addEventListener('DOMContentLoaded', function() {
   var cols = 8;
   var s = 256;
 // Changed loop. Now only making 25 instead of 200.
-  for (var i = 0; i < 25; i++) {
+  for (var i = 25; i--) {
     var elem = document.createElement('img');
     elem.className = 'mover';
     elem.src = "images/pizza.png";
