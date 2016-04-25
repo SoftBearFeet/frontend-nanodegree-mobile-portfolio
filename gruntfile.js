@@ -21,10 +21,22 @@ module.exports = function(grunt) {
           dest: 'dist/'
         }]
       }
+    },
+    uglify : {
+      options: {
+        mangle: false,
+        preserveComments: false
+      },
+      my_target: {
+        files: {
+          'dist/js/perfmatter.min.js' : ['js/permatters.js']
+        }
+      }
     }
   });
 
   grunt.registerTask('default',[
-    'responsive_images'
+    'responsive_images',
+    'uglify'
   ]);
 };
