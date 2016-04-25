@@ -29,7 +29,7 @@ module.exports = function(grunt) {
       },
       my_target: {
         files: {
-          'dist/js/perfmatter.min.js' : ['js/permatters.js']
+          'dist/js/perfmatter.min.js' : ['js/perfmatters.js']
         }
       }
     }
