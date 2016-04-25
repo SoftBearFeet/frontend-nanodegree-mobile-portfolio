@@ -32,11 +32,19 @@ module.exports = function(grunt) {
           'dist/js/perfmatter.min.js' : ['js/perfmatters.js']
         }
       }
+    },
+    cssmin : {
+      target: {
+        files: {
+          'dist/css/style.min.css': ['css/style.css', 'css/style-mobile.css', 'css/print.css']
+        }
+      }
     }
   });
 
   grunt.registerTask('default',[
     'responsive_images',
-    'uglify'
+    'uglify',
+    'cssmin'
   ]);
 };
