@@ -42,12 +42,16 @@ module.exports = function(grunt) {
           'dist/css/style.min.css': ['css/style.css', 'css/style-mobile.css', 'css/print.css']
         }
       }
+    },
+    jshint: {
+      all: ['js/perfmatters.js']
     }
   });
 
   grunt.registerTask('default',[
     'responsive_images',
     'uglify',
-    'cssmin'
+    'cssmin',
+    'jshint'
   ]);
 };
