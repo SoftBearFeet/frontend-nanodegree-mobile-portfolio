@@ -7,7 +7,7 @@
     <meta name="author" content=" FILL ME IN ">
     <title>Cameron Pittman: Portfolio</title>
 
-
+    <!-- Added "async" tag to Google Webfonts -->
     <script async src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
     <script>
       WebFont.load({
@@ -21,6 +21,7 @@
     <!-- Hmm, what is the impact of web fonts on speed? Measure it... -->
     <!-- Removing link <link href="//fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type='text/css'> -->
 
+    <!-- Here I have added the proper media tags. In the actual production environment, the css files have been minified & added inline straight into the html document.-->
     <link href="css/style.css" rel="stylesheet">
     <link href="css/print.css" media="print" rel="stylesheet">
 
@@ -35,7 +36,10 @@
       ga('create', 'UA-XXXX-Y');
       ga('send', 'pageview');
     </script>
+
+    <!-- Added more "async" tags -->
     <script async src="http://www.google-analytics.com/analytics.js"></script>
+    <!-- In the actual production environment, the js file have been minified & added inline straight into the html document.-->
     <script async src="js/perfmatters.js"></script>
   </head>
 
@@ -71,6 +75,7 @@
           </li>
 
           <li>
+            <!-- The actual img here has been compressed -->
             <img style="width: 100px;" src="dist/images-640">
             <a href="views/pizza.html">Cam's Pizzeria</a>
             <p>Who wants a performant pizza?</p>

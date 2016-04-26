@@ -431,6 +431,8 @@ var resizePizzas = function(size) {
 
     // Optional TODO: change to 3 sizes? no more xl?
     // Changes the slider value to a percent width
+
+    //Removed the old dx function. Created a new var and the slider assigns a value to the new var.
     function sizeSwitcher (size) {
       var newWidth;
 
@@ -456,6 +458,8 @@ var resizePizzas = function(size) {
 
   // Iterates through pizza elements on the page and changes their widths
   //function changePizzaSizes(size) {
+
+      // I have changed the way that "randomPizzaContainer" gets accessed. I have also optimized the for loop as well.
       var randomPizza = document.getElementsByClassName("randomPizzaContainer");
       for (var i = 0; i < randomPizza.length; i++) {
           randomPizza[i].style.width = newWidth + "%";
@@ -508,10 +512,11 @@ function updatePositions() {
   frame++;
   window.performance.mark("mark_start_frame");
 
-  // Moved "items" from the loop.
+  // Moved "items" & "top" from the loop.
   var items = document.getElementsByClassName('mover');
   var top = (document.body.scrollTop / 1250);
 
+  // Optimized the for-loop, also made it count down.
   for (var i = items.length; i--;) {
     var phase = Math.sin(top + (i % 5));
     items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
@@ -534,6 +539,7 @@ window.addEventListener('scroll', updatePositions);
 document.addEventListener('DOMContentLoaded', function() {
   var cols = 8;
   var s = 256;
+  
 // Changed loop. Now only making 25 instead of 200.
   for (var i = 25; i--;) {
     var elem = document.createElement('img');
