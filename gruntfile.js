@@ -34,6 +34,9 @@ module.exports = function(grunt) {
       }
     },
     cssmin : {
+      options: {
+        shorthandCompacting: false
+      },
       target: {
         files: {
           'dist/css/style.min.css': ['css/style.css', 'css/style-mobile.css', 'css/print.css']
