@@ -10,7 +10,7 @@ To read the code for "index.html" just pull the repo and open "rd_index.html". T
 ## First Objective:
 I first used PageSpeed Insights (https://developers.google.com/speed/pagespeed/insights/) to get a base line. From there I followed most of the recomendations to achive a 96 for mobile and a 97 for desktop. I compressed the images to a size i felt comfortable with. I then put some "async" tags to some scripts. I also added the proper media tags to some of the css style links. After that, I then decided to minify the javascript file and the css files. I then inlined them both into the "index.html" and minified that as well. There I was able to achieve, again a 96 for moblie and a 97 for desktop.
  
- ## Second Objective:
+## Second Objective:
  I first went into the Chrome Dev Tools and got a base line of my FPS in the timeline tab. I then reduced the number of background pizza images that were generated from 200, to 25. Afterwards I went through and optimized the "for loops". There I was able to achieve  60fps.
  
 
