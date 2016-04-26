@@ -1,5 +1,22 @@
 ## Website Performance Optimization portfolio project
 
+In this project presented from Udacity, I was first supposed to achieve a Pagespeed Insight score of 90 < for mobile use. Then the second objective was to optimize the "pizza.html" page for 60fps. 
+
+To view the site, I have turned on GitHub Pages. The link is: "http://softbearfeet.github.io/frontend-nanodegree-mobile-portfolio/".
+You may view it there.
+
+To read the code for "index.html" just pull the repo and open "rd_index.html". The "rd_index.html" isn't minified, nor does it have the css or js inlined into it. To view those files, just open the respective folders /css or /js to view them there.
+
+## First Objective:
+I first used PageSpeed Insights (https://developers.google.com/speed/pagespeed/insights/) to get a base line. From there I followed most of the recomendations to achive a 96 for mobile and a 97 for desktop. I compressed the images to a size i felt comfortable with. I then put some "async" tags to some scripts. I also added the proper media tags to some of the css style links. After that, I then decided to minify the javascript file and the css files. I then inlined them both into the "index.html" and minified that as well. There I was able to achieve, again a 96 for moblie and a 97 for desktop.
+ 
+ ## Second Objective:
+ I first went into the Chrome Dev Tools and got a base line of my FPS in the timeline tab. I then reduced the number of background pizza images that were generated from 200, to 25. Afterwards I went through and optimized the "for loops". There I was able to achieve  60fps.
+ 
+
+## Below are is the original text that was in the "README.md" provided from Udacity.
+
+
 Your challenge, if you wish to accept it (and we sure hope you will), is to optimize this online portfolio for speed! In particular, optimize the critical rendering path and make this page render as quickly as possible by applying the techniques you've picked up in the [Critical Rendering Path course](https://www.udacity.com/course/ud884).
 
 To get started, check out the repository, inspect the code,
